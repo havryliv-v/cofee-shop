@@ -69,10 +69,16 @@
 
       &__navbar {
          align-items: center;
+         justify-content: flex-start;
 
          span {
             margin: 10px 0;
          }
+      }
+
+      &__navbar-inner {
+         display: flex;
+         flex-direction: column;
       }
    }
 }

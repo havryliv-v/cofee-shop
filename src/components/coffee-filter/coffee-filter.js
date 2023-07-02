@@ -48,7 +48,7 @@ const CoffeeFilter = (props) => {
                </Col>
             </Row>
             <Row>
-               <Col xs={12} sm={6} md={4}>
+               <Col xs={6} md={4}>
                   <div className="filter__item">
                      <div className="filter__img"><img src={coffee} alt="coffee" /></div>
                      <div className="filter__header">AROMISTICO Coffee 1 kg</div>
@@ -58,7 +58,7 @@ const CoffeeFilter = (props) => {
                      </div>
                   </div>
                </Col>
-               <Col xs={12} sm={6} md={4}>
+               <Col xs={6} md={4}>
                   <div className="filter__item">
                      <div className="filter__img"><img src={coffee} alt="coffee" /></div>
                      <div className="filter__header">AROMISTICO Coffee 1 kg</div>
@@ -68,7 +68,7 @@ const CoffeeFilter = (props) => {
                      </div>
                   </div>
                </Col>
-               <Col xs={12} sm={6} md={4}>
+               <Col xs={6} md={4}>
                   <div className="filter__item">
                      <div className="filter__img"><img src={coffee} alt="coffee" /></div>
                      <div className="filter__header">AROMISTICO Coffee 1 kg</div>
@@ -78,7 +78,7 @@ const CoffeeFilter = (props) => {
                      </div>
                   </div>
                </Col>
-               <Col xs={12} sm={6} md={4}>
+               <Col xs={6} md={4}>
                   <div className="filter__item">
                      <div className="filter__img"><img src={coffee} alt="coffee" /></div>
                      <div className="filter__header">AROMISTICO Coffee 1 kg</div>
@@ -88,7 +88,7 @@ const CoffeeFilter = (props) => {
                      </div>
                   </div>
                </Col>
-               <Col xs={12} sm={6} md={4}>
+               <Col xs={6} md={4}>
                   <div className="filter__item">
                      <div className="filter__img"><img src={coffee} alt="coffee" /></div>
                      <div className="filter__header">AROMISTICO Coffee 1 kg</div>
@@ -98,7 +98,7 @@ const CoffeeFilter = (props) => {
                      </div>
                   </div>
                </Col>
-               <Col xs={12} sm={6} md={4}>
+               <Col xs={6} md={4}>
                   <div className="filter__item">
                      <div className="filter__img"><img src={coffee} alt="coffee" /></div>
                      <div className="filter__header">AROMISTICO Coffee 1 kg</div>
