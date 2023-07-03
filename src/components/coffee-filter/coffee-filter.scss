@@ -1,39 +1,16 @@
 .filter {
-   min-height: 150px;
-   margin-top: 60px;
-
    &__search-wrapper {
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 30px;
+      min-height: 50px;
    }
 
-   &__input {
-      width: 200px;
-      height: 35px;
-      border: 0;
-      border-radius: 4px;
-      background: #EEECEC;
-      box-shadow: 5px 5px 30px 2px rgba(0, 0, 0, 0.25);
-      text-align: center;
-      font-size: 14px;
-
-      &:focus {
-         outline: none;
-      }
-   }
 
    &__btn-group {
       display: flex;
       align-items: center;
       height: 50px;
-
-   }
-
-   &__text {
-      font-size: 14px;
-      margin-right: 19px;
 
    }
 
@@ -51,6 +28,7 @@
       font-size: 12px;
       background: #FFF;
       transition-duration: 0.1s;
+      text-align: center;
       color: #000;
 
       &:first-child {

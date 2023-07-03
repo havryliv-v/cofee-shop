@@ -7,6 +7,9 @@ import CoffeeFooter from '../coffee-footer/coffee-footer';
 
 import './app.scss';
 import CoffeeMenu from '../coffee-menu/coffee-menu';
+import CoffeeSearch from '../coffee-search/coffee-search';
+import Container from 'react-bootstrap/esm/Container';
+import Row from 'react-bootstrap/esm/Row';
 
 
 
@@ -23,7 +26,8 @@ class App extends Component {
         { name: 'Kenya', price: 5.99, id: 5 },
         { name: 'Brazil', price: 7.99, id: 6 }
       ],
-      filter: 'All'
+      filter: 'All',
+      term: ''
     }
   }
 
@@ -44,15 +48,36 @@ class App extends Component {
     this.setState({ filter });
   }
 
+  searchProd = (items, term) => {
+    if (term.length === 0) {
+      return items;
+    }
+    return items.filter(item => {
+      return item.name.toLowerCase().indexOf(term.toLowerCase()) > -1
+    })
+  }
+
+  onFilterSearch = (term) => {
+    this.setState({ term })
+
+  }
+
   render() {
-    const { data, filter } = this.state;
-    const visibleData = this.filterPost(data, filter);
+    const { data, term, filter } = this.state;
+    const visibleData = this.filterPost(this.searchProd(data, term), filter);
     return (
       <div className="app" >
         <CoffeeHeader />
         <CoffeeDescr />
-        <div className="filter-menu">
-          <CoffeeFilter filter={filter} onFilterSelect={this.onFilterSelect} />
+        <div className="searchFilter">
+          <Container>
+            <Row>
+              <CoffeeSearch onFilterSearch={this.onFilterSearch} />
+              <CoffeeFilter filter={filter} onFilterSelect={this.onFilterSelect} />
+            </Row>
+          </Container>
+        </div>
+        <div className="menu">
           <CoffeeMenu data={visibleData} />
         </div>
         <div className="footer">
