@@ -5,9 +5,7 @@
 
    &__navbar-inner {
       display: inline-block;
-      line-height: 13px;
-
-
+      line-height: 28px;
    }
 
    &__navbar {
@@ -20,12 +18,14 @@
       }
 
       span {
+         color: white;
          display: inline-block;
          width: 150px;
          cursor: pointer;
          font-size: 16px;
 
          &:hover {
+            transition: all 300ms;
             color: #C8B7B3;
             font-size: 17px;
          }

@@ -1,33 +1,34 @@
 import Col from 'react-bootstrap/Col';
 
 import './coffee-search.scss'
+import { useState } from 'react';
 
-import { Component } from 'react';
 
-class CoffeeSearch extends Component {
-   constructor(props) {
-      super(props);
-      this.state = {
-         term: ''
-      }
-   }
+const CoffeeSearch = (props) => {
+   // constructor(props) {
+   //    super(props);
+   //    state = {
+   //       term: ''
+   //    }
+   // }
 
-   onFilterSearch = (e) => {
+   const [term, setTerm] = useState('');
+
+   const onFilterSearch = (e) => {
       const term = e.target.value;
-      this.setState({ term })
-      this.props.onFilterSearch(term)
+      setTerm(term)
+      props.onFilterSearch(term)
    }
 
-   render() {
-      return (
-         <Col md={12} lg={6}>
-            <div className="search__wrapper">
-               <span className="search__text">Looking for</span>
-               <input type="text" value={this.state.term} onChange={this.onFilterSearch} placeholder="start typing here..." className="search__input" />
-            </div>
-         </Col>
-      )
-   }
+
+   return (
+      <Col md={12} lg={6}>
+         <div className="search__wrapper">
+            <span className="search__text">Looking for</span>
+            <input type="text" value={term} onChange={onFilterSearch} placeholder="start typing here..." className="search__input" />
+         </div>
+      </Col>
+   )
 }
 
 export default CoffeeSearch;

@@ -3,6 +3,8 @@ import './coffee-header.scss'
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router-dom';
+
 
 import { ReactComponent as ReactLogo } from "../../icons/logo-beans.svg";
 
@@ -15,9 +17,9 @@ const CoffeeHeader = () => {
                   <div className="header__navbar">
                      <ReactLogo />
                      <div className="header__navbar-inner">
-                        <span>Coffee house</span>
-                        <span>Our coffee</span>
-                        <span>For your pleasure</span>
+                        <Link to={'/'}><span>Coffee house</span></Link>
+                        <Link to={'/coffee'}><span>Our coffee</span></Link>
+                        <Link to={'/description'}><span>For your pleasure</span></Link>
                      </div>
                   </div>
                </Col>
